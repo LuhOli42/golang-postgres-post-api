@@ -1,0 +1,28 @@
+@url=http://localhost
+@port=3000
+
+###
+POST {{url}}:{{port}}/posts
+Content-Type: application/json
+
+{
+    "Title":"teste"
+}
+
+###
+get {{url}}:{{port}}/posts
+
+###
+get {{url}}:{{port}}/post/9
+
+###
+PUT {{url}}:{{port}}/post/2
+Content-Type: application/json
+
+{
+    "Body":"udapte",
+    "Title":"teste"
+}
+
+###
+Delete {{url}}:{{port}}/post/2
